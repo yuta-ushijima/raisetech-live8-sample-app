@@ -76,6 +76,6 @@ class FruitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fruit_params
-      params.require(:fruit).permit(:name, :row_order_position)
+      params.require(:fruit).permit(:name, :row_order_position, :image)
     end
 end
