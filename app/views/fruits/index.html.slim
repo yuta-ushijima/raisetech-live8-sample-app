@@ -4,6 +4,7 @@ table.table.table-bordered.table-sortable
   thead
     tr
       th Name
+      th image
       th
       th
       th
@@ -12,6 +13,7 @@ table.table.table-bordered.table-sortable
     - @fruits.each do |fruit|
       tr.item(data = { model_name: fruit.class.name.underscore, update_url: fruits_path(fruit) })
         td = fruit.name
+        td = fruit.image.attached? ? image_tag(fruit.image.variant(resize: "100x100")) : nil
         td = link_to 'Show', fruit
         td = link_to 'Edit', edit_fruit_path(fruit)
         td = link_to 'Destroy', fruit, data: {:confirm => 'Are you sure?'}, :method => :delete
