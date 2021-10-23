@@ -51,5 +51,6 @@ test:
 production:
   <<: *default
   database: raisetech_live8_sample_app_production
-  username: raisetech_live8_sample_app
+  username: <%= ENV['RAISETECH_LIVE8_SAMPLE_APP_DATABASE_USERNAME'] %>
   password: <%= ENV['RAISETECH_LIVE8_SAMPLE_APP_DATABASE_PASSWORD'] %>
+  host: <%= ENV['RAISETECH_LIVE8_SAMPLE_APP_DATABASE_HOST'] %>
