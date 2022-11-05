@@ -52,6 +52,6 @@ test:
 production:
   <<: *default
   database: raisetech_live8_sample_app_production
-  username: <%= ENV['RAISETECH_LIVE8_SAMPLE_APP_DATABASE_USERNAME'] %>
-  password: <%= ENV['RAISETECH_LIVE8_SAMPLE_APP_DATABASE_PASSWORD'] %>
-  host: <%= ENV['RAISETECH_LIVE8_SAMPLE_APP_DATABASE_HOST'] %>
+  username: <%=  Rails.application.credentials.db[:username] %>
+  password: <%=  Rails.application.credentials.db[:password] %>
+  host: <%=  Rails.application.credentials.db[:host] %>
