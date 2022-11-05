@@ -19,6 +19,7 @@ gem 'msgpack', '~> 1.4', '>= 1.4.2'
 gem "aws-sdk-s3", require: false
 gem 'image_processing', '~> 1.2'
 gem 'unicorn'
+gem 'net-smtp'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
