@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: J.EDhPWuKxidQBJdFVFtmiRRaf9
 
 development:
   <<: *default
@@ -52,6 +52,6 @@ test:
 production:
   <<: *default
   database: raisetech_live8_sample_app_production
-  username: <%=  Rails.application.credentials.db[:username] %>
-  password: <%=  Rails.application.credentials.db[:password] %>
-  host: <%=  Rails.application.credentials.db[:host] %>
+  username: <%= Rails.application.credentials.dig(:db, :username) %>
+  password: <%= Rails.application.credentials.dig(:db, :password) %>
+  host: <%= Rails.application.credentials.dig(:db, :host) %>

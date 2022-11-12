@@ -5,8 +5,8 @@ html
     title
       = content_for?(:title) ? yield(:title) : 'Sortable Table Sandbox'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Sortable Table Sandbox'}"
-    == stylesheet_pack_tag "application", :media => 'all'
-    == javascript_pack_tag 'application'
+    == stylesheet_link_tag "application", :media => 'all'
+    == javascript_include_tag 'application'
     == csrf_meta_tags
   body
     header
