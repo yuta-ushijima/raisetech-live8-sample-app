@@ -16,7 +16,7 @@ table.table.table-bordered.table-sortable
         td = fruit.image.attached? ? image_tag(fruit.image.variant(resize: "100x100")) : nil
         td = link_to 'Show', fruit
         td = link_to 'Edit', edit_fruit_path(fruit)
-        td = link_to 'Destroy', fruit, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = link_to 'Destroy', fruit, data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}
 
 br
 

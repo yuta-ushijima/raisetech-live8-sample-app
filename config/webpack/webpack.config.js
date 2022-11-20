@@ -1,3 +1,4 @@
+const mode = process.env.NODE_ENV === 'development' ? 'development' : 'production';
 const path = require("path")
 const webpack = require("webpack")
 
@@ -8,8 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
-    mode: "production",
-    devtool: "source-map",
+    mode: mode,
     entry: {
         application: [
             "./app/javascript/application.js",
@@ -41,5 +41,8 @@ module.exports = {
         // Include plugins
         new RemoveEmptyScriptsPlugin(),
         new MiniCssExtractPlugin(),
-    ]
+    ],
+    optimization: {
+      moduleIds: 'hashed',
+    }
 }
