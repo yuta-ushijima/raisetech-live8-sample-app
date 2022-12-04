@@ -5,6 +5,8 @@ table.table.table-bordered.table-sortable
     tr
       th Name
       th image
+      th image2
+      th image3
       th
       th
       th
@@ -14,6 +16,8 @@ table.table.table-bordered.table-sortable
       tr.item(data = { model_name: fruit.class.name.underscore, update_url: fruits_path(fruit) })
         td = fruit.name
         td = fruit.image.attached? ? image_tag(fruit.image.variant(resize: "100x100")) : nil
+        td = fruit.image2.attached? ? image_tag(fruit.image2.variant(resize: "100x100")) : nil
+        td = fruit.image3.attached? ? image_tag(preview_path(fruit_id: fruit.id)) : nil
         td = link_to 'Show', fruit
         td = link_to 'Edit', edit_fruit_path(fruit)
         td = link_to 'Destroy', fruit, data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}
