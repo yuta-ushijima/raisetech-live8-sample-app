@@ -1,3 +1,6 @@
+# systemdで実行する際はディレクトリ指定が必要なのでコメントインする
+# directory "/var/www/rails/raisetech-live8-sample-app"
+
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
@@ -25,6 +28,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Specifies the `sockfile` that Puma will use.
+# アプリケーションを配置している場所によってpathを変更する
 bind "unix:///home/ec2-user/raisetech-live8-sample-app/tmp/sockets/puma.sock"
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked web server processes. If using threads and workers together
