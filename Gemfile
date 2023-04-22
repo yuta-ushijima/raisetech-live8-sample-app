@@ -43,3 +43,4 @@ gem 'hiredis', '~> 0.6'
 # For Stimulus
 gem 'jsbundling-rails'
 gem 'cssbundling-rails'
+gem 'stimulus-rails'
