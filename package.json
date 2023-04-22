@@ -14,7 +14,7 @@
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "turbolinks": "^5.2.0",
-    "webpack": "^5.74.0",
+    "webpack": "^5.76.0",
     "webpack-remove-empty-scripts": "^1.0.1"
   },
   "version": "0.1.0",
