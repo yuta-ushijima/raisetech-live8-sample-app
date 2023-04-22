@@ -1,0 +1,46 @@
+.message__send-button {
+  display: flex;
+  border-radius: 5px;
+  background-color: black;
+  color: ivory;
+}
+
+.message__content-area {
+  padding: 10px;
+  width: 500px;
+  border-radius: 5px;
+  resize: none;
+}
+
+// Refs: https://saruwakakun.com/html-css/reference/speech-bubble:考え事風の吹き出し
+.message__speech-bubble {
+  position: relative;
+  margin: 2em 0 2em 40px;
+  padding: 15px;
+  background: #fff0c6;
+  border-radius: 30px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    width: 13px;
+    height: 12px;
+    bottom: 0;
+    background: #fff0c6;
+    border-radius: 50%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    width: 20px;
+    height: 18px;
+    bottom: 3px;
+    background: #fff0c6;
+    border-radius: 50%;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
