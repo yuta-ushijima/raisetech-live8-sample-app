@@ -19,8 +19,25 @@ export default class extends Controller {
 
     submit(event) {
         event.preventDefault();
-        this.subscription.send({ content: this.inputTarget.value });
-        this.inputTarget.value = "";
+        const inputTarget = this.inputTarget
+        const inputValue = inputTarget.value;
+        const errorMessageElement = document.getElementById('errorMessage');
+        if(inputValue.length <= 140) {
+            if (errorMessageElement) {
+                errorMessageElement.remove()
+                inputTarget.style = ''
+            } else {
+                this.subscription.send({ content: inputValue, valid: true });
+                this.inputTarget.value = "";
+            }
+        } else {
+            const errorMessageElement = document.createElement("p");
+            errorMessageElement.id = 'errorMessage'
+            errorMessageElement.style = 'color: red;'
+            errorMessageElement.textContent = 'つぶやきは140文字以内で入力してください。'
+            inputTarget.parentNode.prepend(errorMessageElement)
+            inputTarget.style = 'border-color: red;'
+        }
     }
 
     appendMessage(message) {
