@@ -14,7 +14,7 @@ MySQL使用　　バージョン8.0.33
 
 4. DBサーバー終了させた時
 エラーが出ます
-![エラー](images/MySQL.png)
+
 
 5. Railsの構成管理ツール
 Active Record Migrations（アクティブレコードマイグレーション）
