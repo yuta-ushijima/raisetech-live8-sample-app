@@ -21,4 +21,4 @@ Active Record Migrations（アクティブレコードマイグレーション�
 ![Rails](images/Migration.png)
 
 ***
-##難しかったです.
+##難しかったです.もっと復習頑張ります
