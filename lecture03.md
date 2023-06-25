@@ -10,7 +10,7 @@ Pumaを使用。バージョン5.6.5
 
 3. DBサーバーについて
 MySQL使用　　バージョン8.0.33
-![MySQL](images/MySQL-version.png)
+![MySQL](images/version-MySQL.png)
 
 4. DBサーバー終了させた時
 エラーが出ます
