@@ -21,6 +21,8 @@ gem 'unicorn'
 gem 'net-smtp'
 gem 'jsbundling-rails'
 gem 'turbo-rails'
+gem 'figaro'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
