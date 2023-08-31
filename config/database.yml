@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: raisetech-db-1.ckqxv4ruunm2.ap-northeast-1.rds.amazonaws.com
+  host: ruby-app-db-1.ckqxv4ruunm2.ap-northeast-1.rds.amazonaws.com
 
 development:
   <<: *default
