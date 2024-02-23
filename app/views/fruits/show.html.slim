@@ -8,6 +8,14 @@ p
   strong Image:
   - if @fruit.image.attached?
     = image_tag(@fruit.image.variant(resize: "860x573"))
+p
+  strong Image2:
+  - if @fruit.image2.attached?
+    = image_tag(@fruit.image2.variant(resize: "860x573"))
+p
+  strong Image3:
+  - if @fruit.image3.attached?
+    = image_tag(preview_path(fruit_id: @fruit.id))
 
 = link_to 'Edit', edit_fruit_path(@fruit)
 '|

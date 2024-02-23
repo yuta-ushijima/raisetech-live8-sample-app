@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :fruits
 
+  get 'preview', controller: :attachments
 end
