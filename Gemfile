@@ -7,7 +7,7 @@ ruby '3.2.3'
 gem 'rails', '7.0.8.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5'
-gem 'puma', '~> 5.6'
+gem 'puma'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
