@@ -14,7 +14,7 @@ After=network.target
 Type=notify
 
 # If your Puma process locks up, systemd's watchdog will restart it within seconds.
-WatchdogSec=10
+WatchdogSec=60
 
 # Preferably configure a non-privileged user
 User=ec2-user
@@ -25,8 +25,7 @@ User=ec2-user
 WorkingDirectory=/home/ec2-user/raisetech-live8-sample-app
 
 # Helpful for debugging socket activation, etc.
-# Environment=PUMA_DEBUG=1
-Environment="PATH=/home/ec2-user/.anyenv/bin:/home/ec2-user/.anyenv/envs/rbenv/shims:/home/ec2-user/.anyenv/envs/rbenv/bin:/home/ec2-user/.anyenv/envs/rbenv/bin:/home/ec2-user/.anyenv/envs/nodenv/shims:/home/ec2-user/.anyenv/envs/nodenv/bin:/home/ec2-user/.anyenv/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin"
+Environment=PUMA_DEBUG=1
 
 # SystemD will not run puma even if it is in your path. You must specify
 # an absolute URL to puma. For example /usr/local/bin/puma
@@ -35,7 +34,11 @@ Environment="PATH=/home/ec2-user/.anyenv/bin:/home/ec2-user/.anyenv/envs/rbenv/s
 
 # Variant: Rails start.
 # ExecStart=/<FULLPATH>/bin/puma -C <YOUR_APP_PATH>/config/puma.rb ../config.ru
-ExecStart=/home/ec2-user/raisetech-live8-sample-app/sbin/puma -C /home/ec2-user/raisetech-live8-sample-app/config/puma.rb /home/ec2-user/raisetech-live8-sample-app/config.ru
+ExecStart=/bin/bash -lc 'bundle exec puma -C config/puma.rb'
+
+# Enabled systemd reload
+# refs: https://zenn.dev/trysmr/articles/65a6db4deffdbf
+ExecReload=/bin/kill -USR2 $MAINPID
 
 # Variant: Use `bundle exec --keep-file-descriptors puma` instead of binstub
 # Variant: Specify directives inline.
