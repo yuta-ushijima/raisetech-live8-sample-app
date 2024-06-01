@@ -1,0 +1,7 @@
+h1 Chat Room
+
+#messages data-controller="chat" data-chat-target="messages"
+  = render @messages
+= form_with model: @message, data: { controller: "chat", action: "submit->chat#submit" } do |form|
+  = form.text_area :content, data: { "chat-target": "input" }, class: "message__content-area"
+  = form.submit "Send", class: "message__send-button"
