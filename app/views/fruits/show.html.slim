@@ -7,7 +7,7 @@ p
 p
   strong Image:
   - if @fruit.image.attached?
-    = image_tag(@fruit.image.variant(resize: "860x573"))
+    = image_tag(@fruit.image.variant(resize_to_fill: [860, 573]))
 
 = link_to 'Edit', edit_fruit_path(@fruit)
 '|
