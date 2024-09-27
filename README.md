@@ -40,7 +40,7 @@ v17.9.1
 
 - MySQL を採用しています。
   - Cloud9 上で動作させる場合は、下記の手順に沿って環境構築を行ってください。
-    - https://github.com/MasatoshiMizumoto/raisetech_documents/blob/main/aws/docs/install_mysql_on_cloud9_amazon_linux_2.md
+    - [Cloud9 上での MySQL セットアップ方法](https://github.com/MasatoshiMizumoto/raisetech_documents/blob/main/aws/docs/install_mysql_on_cloud9_amazon_linux_2.md)
 
 ### 環境構築
 
@@ -61,7 +61,9 @@ bin/dev
 ```
 
 #### Cloud9
-
+- 2024/09/27現在、AWSの新規アカウントではcloud9の利用ができなくなっています。
+- 代替措置と下記のEC2 インスタンス起動用テンプレートリポジトリをRaiseTechでは案内していますが、下記のコマンドはその環境でも実行可能です。
+  - [EC2 インスタンス起動用テンプレート](https://github.com/dai-fuji/launch_ec2)
 ```bash
 bin/cloud9_dev
 ```
