@@ -6,7 +6,7 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.0.0",
     "css-loader": "^6.7.2",
     "jquery": "^3.5.1",
     "mini-css-extract-plugin": "^2.7.0",
