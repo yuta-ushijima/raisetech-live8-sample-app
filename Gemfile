@@ -38,3 +38,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use Redis for Action Cable
 gem "redis", "~> 4.0"
+gem 'hiredis', '~> 0.6'
+
+# For Stimulus
+gem 'jsbundling-rails'
+gem 'cssbundling-rails'
+gem 'stimulus-rails'
